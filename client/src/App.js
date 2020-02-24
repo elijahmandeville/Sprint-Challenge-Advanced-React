@@ -22,6 +22,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <h1>Welcome!</h1>
         <NavBar />
         <PlayerList players={this.state.players} />
       </div>

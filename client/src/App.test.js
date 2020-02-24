@@ -1,9 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import React from "react";
+import * as rtl from "@testing-library/react";
+import "mutationobserver-shim";
+import App from "./App";
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+test("app is rendering", () => {
+  rtl.render(<App />);
 });
+
+// test("header text renders", () => {
+//   const wrapper = rtl.render(<App />);
+
+//   const element = wrapper.getByText(/welcome/i);
+//   expect(element).toBeInTheDocument();
+// });
